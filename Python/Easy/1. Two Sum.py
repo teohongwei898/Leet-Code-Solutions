@@ -13,12 +13,12 @@ class Solution:
       #Check if Target - value is in hashmap, if not, add index to hashmap
       #In the first iteration, hashmap is empty. Hence 100% will map to hashmap first.
       #End result, may not even need to map everything to hashmap since the results may be in the middle of the hashmap.
-      #enumerate tracks index and value in array.
-      prevMap = {} #Value:Index
+      #Enumerate tracks index and value in array.
+      prevMap = {} #Value:Index!!!
       for i,n in enmuerate(nums):
-        diff = target - n
+        diff = target - n           
         if diff in prevMap:
-          return (prevMap[diff],i)
-        prevMap[n] = i
+          return (prevMap[diff],i)   #So since the keys are the values, and the 'stored values' are the indexes, I can return and find the index where the value was placed at.
+        prevMap[n] = i  #So to store, I take the value of the list as the key, and the 'stored value' to be where it was found in the list aka index number in list.
                      
               
