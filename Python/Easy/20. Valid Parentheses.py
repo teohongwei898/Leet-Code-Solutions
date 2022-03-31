@@ -7,20 +7,17 @@ class Solution:
             if s[i] == ("(" or "{" or "["):
                 stack.append(s[i])
             if s[i] == ")":
-                if stack.pop() != "(":
+                if not stack or stack.pop() != "(":
                     return False
-                else:
-                    stack.pop()
+                
             if s[i] == "]":
-                if stack.pop() != "[":
+                if not stack or stack.pop() != "[":
                     return False
-                else:
-                    stack.pop()
+                
             if s[i] == "}":
-                if stack.pop() != "{":
+                if not stack == True or stack.pop() != "{":
                     return False
-                else:
-                    stack.pop()
+                
         
         return True
             
